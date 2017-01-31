@@ -1,0 +1,193 @@
+\documentclass{article}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{amssymb}
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}c<{$}} % Define mathtype column
+
+\begin{document}
+
+
+
+\centerline{\sc \large Abstract Mathematics Homework 2}
+\vspace{.5pc}
+\centerline{\sc Jacob Huesman, 26 Jan 2016}
+
+\vspace{2pc}
+
+\section{Book Problems}
+\subsection{Problem 2.2}
+
+Construct a truth table for $\lnot(\lnot P)$. Is this what you expect? Why?
+
+The truth table of $\lnot(\lnot P)$ is shown below:
+\begin{center}
+	\begin{tabular}{ L | L | L }
+		P & \lnot P & \lnot(\lnot P) \\ 
+		\hline
+		T & F & T \\  
+		F & T & F
+	\end{tabular}
+\end{center}
+
+The truth table shows that the negation of the negation of a statement P is equivalent to P. I expected this as I'm already fairly familiar with logical operators from taking Digital Design and it also makes intuitive sense after so many years of exposure to algebra. A number X times -1 is -X, -X times -1 is X.
+
+\subsection{Problem 2.5}
+Write out the truth table for the statement form $ P \rightarrow \lnot(Q \land \lnot P) $. Is this statement form a tautology, a contradiction, or neither?
+
+The truth table for $ P \rightarrow \lnot(Q \land \lnot P) $ is shown below:
+
+\begin{center}
+	\begin{tabular}{ L L | L | L | L }
+		P & Q & Q \land \lnot P & \lnot (Q \land \lnot P) & P \rightarrow \lnot (Q \land \lnot P) \\
+		\hline
+		T & T & F & T & T \\ 
+		T & F & F & T & T \\  
+		F & T & T & F & T \\
+		F & F & F & T & T
+	\end{tabular}
+\end{center}
+
+The truth table shows that $ P \rightarrow \lnot(Q \land \lnot P) $ is a tautology, which is defined as "a statement form for which the final column in the truth table consists of all T's".
+
+
+\newpage
+\subsection{Problem 2.6}
+Write out the truth table for the statement form $ (P \rightarrow (\lnot R \lor Q)) \land R $. Is this statement form a tautology, a contradiction, or neither?
+
+The truth table for $ (P \rightarrow (\lnot R \lor Q)) \land R $ is shown below:
+
+\begin{center}
+	\begin{tabular}{ L L L | L | L | L }
+		P & Q & R & \lnot R \lor Q & P \rightarrow (\lnot R \lor Q) &(P \rightarrow (\lnot R \lor Q)) \land R \\
+		\hline
+		T & T & T & T & T & T \\ 
+		T & T & F & T & T & F \\  
+		T & F & T & F & F & F \\
+		T & F & F & T & T & F \\
+		F & T & T & T & T & T \\ 
+		F & T & F & T & T & F \\  
+		F & F & T & F & T & T \\
+		F & F & F & F & T & F 
+	\end{tabular}
+\end{center}
+
+The statement form is not a tautology and it is not a contradiction. In order to be a tautology the final column of it's truth table must be all T's. In order to a be a contradiction the final column of it's truth table must be all F's. Since it's last column is composed of both T's and F's the statement form is neither.
+
+
+\newpage
+\subsection{Problem 2.10}
+Consider the statement form $ (P \lor \lnot Q) \rightarrow (R \land Q) $
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}[noitemsep, nolistsep]
+	\item Write out the truth table for this form.
+	\item Give a statement in English that is in this form.
+	\item Write the negation of your English statement, and simplify the sentence as mush as possible.
+\end{enumerate}
+
+The truth table for $ (P \lor \lnot Q) \rightarrow (R \land Q) $ is shown below:
+\begin{center}
+	\begin{tabular}{ L L L | L | L | L }
+		P & Q & R &
+			P \land \lnot Q & 
+			R \land Q &
+			(P \lor \lnot Q) \rightarrow (R \land Q)
+		\\
+		\hline
+		T & T & T & T & T & T \\ 
+		T & T & F & T & F & F \\  
+		T & F & T & T & F & F \\
+		T & F & F & T & F & F \\
+		F & T & T & F & T & T \\ 
+		F & T & F & F & F & T \\  
+		F & F & T & T & F & F \\
+		F & F & F & T & F & F 
+	\end{tabular}
+\end{center}
+
+An example of a statement written in English of the form $ (P \lor \lnot Q) \rightarrow (R \land Q) $ follows. 
+
+If Jessie has fruit or no desert for lunch, then he will have a healthier and more nutritious meal. 
+
+The negation of the statement is derived as follows:
+\begin{equation}
+	\lnot((P \lor \lnot Q) \rightarrow (R \land Q))
+\end{equation}
+\begin{equation}
+	(P \lor \lnot Q) \land \lnot (R \land Q)
+\end{equation}
+\begin{equation}
+	(P \lor \lnot Q) \land (\lnot R \lor \lnot Q)
+\end{equation}
+
+Given the form of statement three, the negation of the previous example is as follows. 
+
+Jessie has fruit or no desert, and he has a less healthy or less nutritious meal.
+
+
+\newpage
+\section{"Knights and Knaves"}
+\subsection{Problem}
+You are on the Island of Knights and Knaves, trying to get to the city. There are two roads in front of you, one going north and one going east. You ask two natives which road goes to the city, and receive the following answers:
+
+Native A: "If we are both knights, then the road due north goes to the city".
+
+Native B: "If only one of us is a knight, then the road due east goes to the city".
+
+Remember that knights always tell the truth and knaves always lie. From the statements, can you tell if A is a knight or a knave? Can you tell if B is a knight or a knave? And, finally, which road will take you to the city?
+Make the effort to write the proof in such a way that a person who reads it will not need to ask you for clarifications. (Try testing this on a friend who is not taking the class!)
+
+\subsection{Approach}
+Let:
+\begin{itemize}[noitemsep, nolistsep]
+	\item A be "native A is a knight"
+	\item B be "native B is a knight"
+	\item C be "the road due North goes to the city". 
+\end{itemize}
+
+Then native A's statement can be expressed as: 
+\begin{equation}
+	(A \land B) \rightarrow C
+\end{equation}
+And native B's statement can be expressed as:
+\begin{equation}
+	(A \veebar B) \rightarrow \lnot C
+\end{equation}
+
+The truth table for the statement forms (1) and (2) is shown below.
+
+\begin{center}
+	\begin{tabular}{ L L L | L | L | L | L }
+		A & B & C & A \land B & A \veebar B & (A \land B) \rightarrow C & (A \land B) \rightarrow C \\
+		\hline
+		T & T & T & T & F & T & T \\ 
+		T & T & F & T & F & F & T \\  
+		T & F & T & F & T & T & F \\
+		T & F & F & F & T & T & T \\
+		F & T & T & F & T & T & F \\ 
+		F & T & F & F & T & T & T \\  
+		F & F & T & F & F & T & T \\
+		F & F & F & F & F & T & T 
+	\end{tabular}
+\end{center}
+
+Let's assume native A is a knave. The only row in the truth table for which native A is a knave is row two, which assumes A is a knight. This introduces a contradiction, so native A must be a knight.
+
+Row four of the new table can be eliminated as well, as equation (2) comes out to true with the assumption that native B is a knave. A knave cannot tell the truth, introducing a contradiction. 
+
+We now know that A is a knight, so the bottom four rows of the table can be discarded, as well as row two and four. The resulting table is shown below.
+
+\begin{center}
+	\begin{tabular}{ L L L | L | L | L | L }
+		A & B & C & A \land B & A \veebar B & (A \land B) \rightarrow C & (A \land B) \rightarrow C \\
+		\hline
+		T & T & T & T & F & T & T \\ 
+		T & F & T & F & T & T & F \\	
+	\end{tabular}
+\end{center}
+
+We are left with two possible states of A, B and C. The first is that both A and B are knights, and the road due North goes to the city. The second is that A is a knight, B is a knave, and the road due North goes to the city.
+
+So we know A is a knight and the road due North goes to the city. We cannot say whether native B is a knight or a knave, as either arrangement, based on information from native A and native B, is valid.
+
+\end{document}

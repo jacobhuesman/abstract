@@ -1,0 +1,174 @@
+\documentclass{article}
+%\documentclass{scrartcl}
+\usepackage{scrextend}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{amssymb}
+\usepackage{array}   % for \newcolumntype macro
+\usepackage{amsthm}
+\usepackage{chngcntr}
+
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+
+\newcolumntype{L}{>{$}c<{$}} % Define mathtype column
+
+\begin{document}
+
+
+
+\centerline{\sc \large Abstract Mathematics Homework 3}
+\vspace{.5pc}
+\centerline{\sc Jacob Huesman, 03 Feb 2016}
+
+\vspace{2pc}
+
+
+\section{Book Problems}
+\subsection{Problem 3.2}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}[noitemsep, nolistsep]
+	\item Let x be an integer. Prove that if x is odd, then $x^2$ is odd. Make sure you state your assumption as the first line and your conclusion as the last line.	
+	\item State the contrapositive of what you just proved.
+	\item Combining the result of part (a) with Theorem 3.3 gives a stronger result. Say precisely what that result is.
+\end{enumerate}
+	
+\textit{Proof.}
+\begin{addmargin}[0.75cm]{0cm}
+	Since x is odd, we know that for some integer $n$, $x=2n+1$.
+	
+	We can then state the following:
+	\begin{equation}
+		x^2 = (2n+1)^2 = 4n^2+4n+1 
+		= 2(2n^2+2n)+1
+	\end{equation}
+	
+	So $x^2 = 2(2n^2 + 2n) + 1$, where $2n^2 + 2n$ is an integer k.
+	
+	Therefore $x^2=2k+1$, which matches the definition of an odd number.
+	
+	We can then conclude that if x is odd, then $x^2$ is odd.
+	
+	The contrapositive of this statement is, if $x^2$ is even, then x is even.
+
+	\qed
+\end{addmargin}
+
+DO C
+
+
+\pagebreak
+\subsection{Problem 3.3}
+For each of the following, write out the contrapositive and the converse of the sentence.
+\begin{enumerate}[noitemsep, nolistsep]
+	\item If you are the President of the United States, then you live in a white house.
+	\item If you are going to bake a souffl\'e, then you need eggs.
+	\item If x is a real number, then x is an integer.
+	\item If x is a real number, then $x^2<0$.
+\end{enumerate}
+
+\subsubsection{If you are the President of the United States, then you live in a white house.}
+Contrapositive: 
+If you don't live in a white house, you are not the President of the United States.
+
+Converse: 
+If you live in a white house, you are the President of the United States.
+
+\subsubsection{If you are going to bake a souffl\'e, then you need eggs.}
+Contrapositive: 
+If you don't need eggs, then you are not going to bake a souffl\'e.
+
+Converse: 
+If you need eggs, you are going to bake a souffl\'e.
+
+\subsubsection{If x is a real number, then x is an integer.}
+Contrapositive: 
+If x is not an integer, then x is not a real number.
+
+Converse: 
+If x is an integer, then x is a real number.
+
+\subsubsection{If x is a real number, then \boldmath $x^2<0$}
+Contrapositive: 
+If x is not an integer, then x is not a real number.
+
+Converse: 
+If x is an integer, then x is a real number.
+
+
+\pagebreak
+\subsection{Problem 3.14}
+Let $n$ be an integer. Prove that if $3n$ is odd, then $n$ is odd.
+
+\textit{Proof.}
+\begin{addmargin}[0.75cm]{0cm}
+
+The contrapositive of the above statement is, if n is even, then 3n is even.
+
+An even number is defined as $x=2m$, where $m \epsilon \mathbb{Z}$.
+
+So $3n=3(2m)=2(3m)=2q$ where $q \epsilon \mathbb{Z}$.
+
+Knowing $q \epsilon \mathbb{Z}$, we find that if $n$ is even, then $3n$ is even.
+
+The above statement being the contrapositive of what we were trying to prove, we conclude
+that if $3n$ is odd, then $n$ is odd.
+
+\qed
+\end{addmargin}
+
+
+\subsection{Problem 3.15}
+Let $x$ be a natural number. Prove that if $x$ is odd, then $\sqrt{2x}$ is not an integer.
+
+\textit{Proof.}
+\begin{addmargin}[0.75cm]{0cm}
+	
+	The contrapositive of the above statement is, if $\sqrt{2x}$ is an integer, then $x$ is even.
+	
+	If x is odd and $x \epsilon \mathbb{N}$, $x = 2n+1$ for $n \epsilon \mathbb{N}$
+	
+	Substituting this into $\sqrt{2x}$, you get $\sqrt{2(2n+1)}$, where $(2n+1)$ is clearly an integer.
+	
+	An integer multiplied by an integer will always return an integer, so $2(2n + 1)$ is also an integer.
+	
+	\begin{equation}
+		\sqrt{2(2n+1)} = \sqrt{4(k+1/2)} = 2 \sqrt{k+1/2}
+	\end{equation}
+	
+	From the above equation we conclude that $\sqrt{k+1/2}$ is not an integer and therefore 
+	if $x$ is odd, then $\sqrt{2x}$ is not an integer.
+	
+	\qed
+\end{addmargin}
+
+\pagebreak
+\subsection{Problem 3.16}
+Let $x$ and $y$ be real numbers. Show that if $x \neq y$ and $x,y \geq 0$, then $x^2 \neq y^2$.
+
+\textit{Proof.}
+\begin{addmargin}[0.75cm]{0cm}
+	We start by taking the contrapositive of the above statement.
+	
+	If $x^2 = y^2$, then $x = y$ and $x,y \geq 0$.
+	
+	For $a$ to equal $b$, $\frac{a}{b}$ must equal 1.
+	
+	If follows that $\frac{x^2}{y^2}=(\frac{x}{y})^2=1$.
+	
+	If we take the square root of both sides we get $\frac{x}{y}=1$.
+	
+	Therefore if $x^2=y^2$, then $x=y$.
+	
+	We conclude via contrapositive that if $x \neq y$ and $x,y \geq 0$, then $x^2 \neq y^2$.
+	
+	\qed
+\end{addmargin}
+
+
+\pagebreak
+\section{Group Problem}
+
+
+\end{document}
