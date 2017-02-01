@@ -169,6 +169,131 @@ Let $x$ and $y$ be real numbers. Show that if $x \neq y$ and $x,y \geq 0$, then 
 
 \pagebreak
 \section{Group Problem}
+The police are investigating a crime in the Island of Knights and Knaves. There are three suspects, A, B and C. The known facts are:
 
+\begin{itemize}[noitemsep, nolistsep]
+	\item Fact 1: Exactly one of them is guilty.
+	\item Fact 2: One of them is a knight, one of them is a knave, and one of them is normal (a normal may tell the truth or may lie). But we don't know who is what.
+	\item Fact 3: The guilty person is not a knave.
+\end{itemize}
+
+When interrogated, the suspects said the following statements:
+\begin{itemize}[noitemsep, nolistsep]
+	\item I am innocent!
+	\item A is innocent.
+	\item No, A is guilty!
+\end{itemize}
+
+\subsection{Question 1} 
+From these statements and the facts, we can conclude that there are three possible scenarios. Find the three scenarios, determining in each of them who is the knight, who is the knave, who is normal, and who is guilty.
+
+\textit{Proof.}
+\begin{addmargin}[0.75cm]{0cm}
+	Let $P = ``A\ is\ innocent"$.
+	
+	We are given that each suspect A, B, and C can assume one of three states that is unique from 
+	the other suspects. The states are knight(T), knave(F), normal(X).
+	
+	This gives us six possible scenarios.
+	
+	\begin{center}
+		\begin{tabular}{ L L L }
+			A & B & C \\
+			\hline
+			T & F & X \\ 
+			T & X & F \\  
+			F & T & X \\
+			F & X & T \\
+			X & T & F \\ 
+			X & F & T
+		\end{tabular}
+	\end{center}
+	
+	\pagebreak
+	
+	Using the scenarios in the table above we can compare the knight (Q) and knave's (R) response to the questioning in each scenario for equivalence. We cannot use the normal's response as they could be lying or telling the truth, giving us no useful information. So we get.
+	
+	\begin{center}
+		\begin{tabular}{ L L L | L | L | L }
+			A & B & C & Q & R & Q \equiv R \\
+			\hline
+			T & F & X & \ \   P & \lnot P & F  \\ 
+			T & X & F & \ \   P & \ \   P & T  \\  
+			F & T & X & \ \   P & \lnot P & F  \\
+			F & X & T & \lnot P & \lnot P & T  \\
+			X & T & F & \ \   P & \ \   P & T  \\ 
+			X & F & T & \lnot P & \lnot P & T
+		\end{tabular}
+	\end{center}
+	
+	After analyzing the scenarios for contradictions, we are left with 4 possibilities.
+	
+	\begin{center}
+		\begin{tabular}{ L L L }
+			A & B & C \\
+			\hline
+			T & X & F \\  
+			F & X & T \\
+			X & T & F \\ 
+			X & F & T
+		\end{tabular}
+	\end{center}
+	
+	Using fact three, we can remove the second scenario, as it states that A is guilty, which is not possible, as A is a knave. So we get.
+	
+	\begin{center}
+		\begin{tabular}{ L L L }
+			A & B & C \\
+			\hline
+			T & X & F \\  
+			X & T & F \\ 
+			X & F & T
+		\end{tabular}
+	\end{center}
+	
+	This leaves us with three possible scenarios.
+	
+	\begin{itemize}[noitemsep, nolistsep]
+		\item A is an innocent knight, B is a guilty normal, C is an innocent knave.
+		\item A is an innocent normal, B is a guilty knight, C is an innocent knave.
+		\item A is a guilty normal, B is an innocent knave, C is an innocent knight.
+	\end{itemize}
+	
+	\qed
+\end{addmargin}
+
+\pagebreak
+
+\subsection{Question 2} 
+Since they were not able to determine who was guilty, the police asked Inspector
+Craig of Scotland Yard to come help them. Inspector Craig asked C: “Are you guilty?” C
+answered something. Inspector Craig thought for a moment, then asked A: “Is C guilty?”
+A answered, and from his answer the Inspector could determine which of the three previous
+scenarios was the correct one.
+
+
+Who is the knight? Who is the knave? Who is normal? Who is guilty? What did C and A
+answer to Inspector Craig’s questions?
+
+\textit{Proof.}
+\begin{addmargin}[0.75cm]{0cm}
+	We know from the previous three scenarios that C is either a knight or a knave, and A is either a normal or a knight.	So when C is asked if guilty the knight would reply no, the knave would reply yes.
+	
+	We also know that C is not guilty, as the first two scenarios C is a knave which via Fact 3 can't be guilty, and in scenario 3 is a knight claiming A is guilty.
+	
+	A response from C claiming not guilty would have ended Inspector Craig's questioning, as the only scenario in which this can happen is scenario 3.
+	
+	This leaves scenarios one and two.
+	
+	If A had responded honestly we would have had to continue questioning, as we would not know if A was a knight or a normal.
+	
+	So A must have lied, responding that C is guilty.
+	
+	We can then read the conclusion that A is a guilty normal, B is an innocent knave, C is an innocent knight. C responded "I am guilty", A responded "C is guilty".
+	
+	
+	
+	\qed
+\end{addmargin}
 
 \end{document}
