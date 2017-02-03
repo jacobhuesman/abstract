@@ -36,6 +36,8 @@
 	
 \textit{Proof.}
 \begin{addmargin}[0.75cm]{0cm}
+	Assume x is an odd integer.
+	
 	Since x is odd, we know that for some integer $n$, $x=2n+1$.
 	
 	We can then state the following:
@@ -49,13 +51,17 @@
 	Therefore $x^2=2k+1$, which matches the definition of an odd number.
 	
 	We can then conclude that if x is odd, then $x^2$ is odd.
-	
-	The contrapositive of this statement is, if $x^2$ is even, then x is even.
 
 	\qed
 \end{addmargin}
 
-DO C
+The contrapositive of the above statement is, if $x^2$ is even, then x is even.
+
+Theorem 3.3 states that for an integer $x$: If $x^2$ is odd, then $x$ is odd.
+This strengthens our result as we now know that not only does $x$ being odd imply that
+$x^2$ is odd, we also know that $x^2$ being odd implies that $x$ is odd. Since each one
+implies the other, we can state that $x$ is odd if and only if $x^2$ is odd.
+
 
 
 \pagebreak
@@ -84,17 +90,17 @@ If you need eggs, you are going to bake a souffl\'e.
 
 \subsubsection{If x is a real number, then x is an integer.}
 Contrapositive: 
-If x is not an integer, then x is not a real number.
+If $x$ is not an integer, then $x$ is not a real number.
 
 Converse: 
-If x is an integer, then x is a real number.
+If $x$ is an integer, then $x$ is a real number.
 
 \subsubsection{If x is a real number, then \boldmath $x^2<0$}
 Contrapositive: 
-If x is not an integer, then x is not a real number.
+If $x^2 \geq 0$, then $x$ is not a real number.
 
 Converse: 
-If x is an integer, then x is a real number.
+If $x^2 < 0$, then $x$ is a real number.
 
 
 \pagebreak
@@ -104,13 +110,16 @@ Let $n$ be an integer. Prove that if $3n$ is odd, then $n$ is odd.
 \textit{Proof.}
 \begin{addmargin}[0.75cm]{0cm}
 
-The contrapositive of the above statement is, if n is even, then 3n is even.
+The contrapositive of the above statement is, if $n$ is even, then $3n$ is even.
 
 An even number is defined as $x=2m$, where $m \epsilon \mathbb{Z}$.
 
-So $3n=3(2m)=2(3m)=2q$ where $q \epsilon \mathbb{Z}$.
+We can then state that:
+\begin{equation} 
+	3n=3(2m)=2(3m)=2q, q \epsilon \mathbb{Z}
+\end{equation}
 
-Knowing $q \epsilon \mathbb{Z}$, we find that if $n$ is even, then $3n$ is even.
+Knowing $q$ is an integer, we find that if $n$ is even, then $3n$ is even.
 
 The above statement being the contrapositive of what we were trying to prove, we conclude
 that if $3n$ is odd, then $n$ is odd.
@@ -125,20 +134,20 @@ Let $x$ be a natural number. Prove that if $x$ is odd, then $\sqrt{2x}$ is not a
 \textit{Proof.}
 \begin{addmargin}[0.75cm]{0cm}
 	
-	The contrapositive of the above statement is, if $\sqrt{2x}$ is an integer, then $x$ is even.
+%	The contrapositive of the above statement is, if $\sqrt{2x}$ is an integer, then $x$ is even.
+	Assume that $\sqrt{2x}$ is an integer.
 	
 	If x is odd and $x \epsilon \mathbb{N}$, $x = 2n+1$ for $n \epsilon \mathbb{N}$
 	
-	Substituting this into $\sqrt{2x}$, you get $\sqrt{2(2n+1)}$, where $(2n+1)$ is clearly an integer.
-	
-	An integer multiplied by an integer will always return an integer, so $2(2n + 1)$ is also an integer.
+	Substituting this into $\sqrt{2x}$ we get:.
 	
 	\begin{equation}
-		\sqrt{2(2n+1)} = \sqrt{4(k+1/2)} = 2 \sqrt{k+1/2}
+		\sqrt{2(2n+1)} = \sqrt{4(n+1/2)} = 2 \sqrt{n+1/2}
 	\end{equation}
 	
-	From the above equation we conclude that $\sqrt{k+1/2}$ is not an integer and therefore 
-	if $x$ is odd, then $\sqrt{2x}$ is not an integer.
+	From the above equation we conclude that $\sqrt{n+1/2}$ is not an integer, which contradicts our assumption.
+
+	We conclude that if $x$ is odd, then $\sqrt{2x}$ is not an integer.
 	
 	\qed
 \end{addmargin}
@@ -151,11 +160,11 @@ Let $x$ and $y$ be real numbers. Show that if $x \neq y$ and $x,y \geq 0$, then 
 \begin{addmargin}[0.75cm]{0cm}
 	We start by taking the contrapositive of the above statement.
 	
-	If $x^2 = y^2$, then $x = y$ and $x,y \geq 0$.
+	If $x^2 = y^2$ and $x,y \geq 0$, then $x = y$.
 	
 	For $a$ to equal $b$, $\frac{a}{b}$ must equal 1.
 	
-	If follows that $\frac{x^2}{y^2}=(\frac{x}{y})^2=1$.
+	It follows that $\frac{x^2}{y^2}=(\frac{x}{y})^2=1$.
 	
 	If we take the square root of both sides we get $\frac{x}{y}=1$.
 	
