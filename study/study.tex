@@ -1,0 +1,169 @@
+\documentclass{article}
+%\documentclass{scrartcl}
+\usepackage{scrextend}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{amssymb}
+\usepackage{array}   % for \newcolumntype macro
+\usepackage{amsthm}
+\usepackage{chngcntr}
+\usepackage{mathtools}
+
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+
+\newcolumntype{L}{>{$}c<{$}} % Define mathtype column
+
+\begin{document}
+
+
+
+\centerline{\sc \large Abstract Mathematics Homework 3}
+\vspace{.5pc}
+\centerline{\sc Jacob Huesman, 03 Feb 2016}
+
+\vspace{2pc}
+
+
+\section{The How, When, and Why of Mathematics}
+\begin{enumerate}[noitemsep, nolistsep]
+	\item \textbf{Polya's method}
+		\subitem a. Understanding the problem
+		\subitem b. Devising a plan
+		\subitem c. Carrying out the plan
+		\subitem d. Looking back
+\end{enumerate} 
+	
+
+\section{Logically Speaking}
+\textbf{Theorem 2.7.} 
+Two statement forms $P$ and $Q$ are equivalent if and only if they have the same truth table.
+
+\textbf{Theorem 2.9.}
+Let P and Q denote statement forms. The following are tautologies:
+\begin{enumerate}[noitemsep, nolistsep]
+	\item \textbf{DeMorgan's laws}
+	\subitem  $\lnot(P \lor Q) \leftrightarrow (\lnot P \land \lnot Q)$
+	\subitem  $\lnot(P \land Q) \leftrightarrow (\lnot P \lor \lnot Q)$
+	\item \textbf{Implication and its negation}
+	\subitem $(P \rightarrow Q) \leftrightarrow (\lnot P \lor Q)$
+	\subitem $\lnot(P \rightarrow Q) \leftrightarrow (P \lor \lnot Q)$
+	\item \textbf{Double negation}
+	\subitem $\lnot(\lnot P) \leftrightarrow P$
+\end{enumerate} 
+
+
+\section{Introducing the Contrapositive and Converse}
+\subsection{Definitions}
+\textbf{Definition 3.1.} An \textbf{integer} $x$ \textbf{is odd} if there is an integer $n$ such that $x = 2n +1$.
+
+\textbf{Definition 3.2.} An \textbf{integer} $x$ \textbf{is even} if there is an integer $n$ such that $x = 2n$
+
+\textbf{Definition 3.3.} An integer $p$ is \textbf{prime} if $p > 1$ and $p$ cannot be written as a product of two positive integers, both different from $p$.
+
+
+\subsection{Theorems}
+\textbf{Theorem 3.1.} Let $P$, $Q$, and $R$ denote statement forms. Then the following are tautologies:
+\begin{enumerate}[noitemsep, nolistsep]
+	\item \textbf{Distributive property}
+		\subitem  $(P \land (Q \lor R)) \leftrightarrow ((P \land Q) \lor (P \land R))$
+		\subitem  $(P \lor (Q \land R)) \leftrightarrow ((P \lor Q) \land (P \lor R))$
+	\item \textbf{Associative property}
+		\subitem $(P \land (Q \land R)) \leftrightarrow ((P \land Q) \land R)$
+		\subitem $(P \lor (Q \lor R)) \leftrightarrow ((P \lor Q) \lor R)$
+
+	\item \textbf{Commutative property}
+		\subitem  $(P \land Q) \leftrightarrow (Q \land P)$
+		\subitem  $(P \lor Q) \leftrightarrow (Q \lor P)$
+\end{enumerate} 
+
+\textbf{Theorem 3.3.} Let $x$ be an integer. If $x^2$ is odd, then $x$ is odd.
+
+\textbf{Theorem (Contrapositive of the statement of Theorem 3.3).} Let $x$ be an integer. If $x$ is even, then $x^2$ is even.
+
+
+\section{Set Notation and Quantifiers}
+\subsection{Common Sets}
+The natural numbers : $\mathbb{N} = \{0,1,2,3,...\}$
+
+The integers : $\mathbb{Z} = \{...,-2,-1,0,1,2,...\}$
+
+The rational numbers : $\mathbb{Q} = \{p/q : p,q \in \mathbb{Z}\ and\ q \neq 0 \}$
+
+The real numbers : $\mathbb{R}$
+
+The complex numbers : $\mathbb{C} = \{a + bi : i^2 = -1 \ and \ a,b \in \mathbb{R}\}$
+
+If A is one of the sets $\mathbb{Z}$, $\mathbb{Q}$, or $\mathbb{R}$, then the set of the positive elements is denoted by $A^+ = \{x \in A : x > 0 \}$ and the set of the negative elements is denoted by $A^- = \{x \in A : x < 0 \}$. Thus we have defined $\mathbb{Z}^+$, $\mathbb{Z}^-$, $\mathbb{Q}^+$, $\mathbb{Q}^-$, $\mathbb{R}^+$, and $\mathbb{R}^-$
+
+The plane $\mathbb{R}^2 = \{(x,y) : x,y \in \mathbb{R} \}$
+
+For $n \in \mathbb{Z}^+$, Euclidean $n$-space 
+	$\mathbb{R}^n = \{(x_{1},x_{2},...,x_{n}) : x_{j} \in \mathbb{R}$ for $j=1,2,...,n \}$.
+	
+\subsection{Symbols}
+For all $\forall$
+
+There exists $\exists$
+
+\section{Proof Techniques}
+\subsection{Definitions}
+Three methods discussed in this chapter:
+\begin{itemize}
+	\item direct proof (just get started and keep going)
+	\item proof by contradiction (show that the negation of the statement you wish to prove implies the impossible)
+	\item proof in cases (which may be used when conditions dictate that different situations occur).
+\end{itemize}
+
+\textbf{Definition 5.1.} A nonzero integer $a$ \textbf{divides} an integer $b$ if there is an integer $n$ such that $b = an$. We write this as $a|b$.
+
+\textbf{Definition 5.2.} For a real number x, the \textbf{absolute value} of $x$ is defined to be
+
+\begin{center}
+	\begin{math}
+		|x| =
+			\begin{cases*}
+				 x & if $x \geq 0$ \\
+				-x & if $x < 0$
+			\end{cases*}
+	\end{math}
+\end{center}
+
+\subsection{Theorems}
+\textbf{Theorem 5.1.} If $a$, $b$ and $c$ are integers such that $a$ divides $b$ and $a$ divides $c$, then $a$ divides $b$ + $c$.
+
+\textbf{Theorem 5.2.} The number $\sqrt{2}$ is not rational.
+
+\textbf{Theorem 5.3.} Let $x$ and $y$ be real numbers. Then $|xy| = |x||y|$.
+
+
+\section{Sets}
+\subsection{Definitions}
+\textbf{Definition 6.1.} The \textbf{empty set}, denoted $\emptyset$ is the set with no elements.
+
+\textbf{Definition 6.2.} The set $A$ is a \textbf{subset} of the set $B$ or, equivalently, $A$ is \textbf{contained} in $B$, if every element of A is an element of $B$. We write $A \subseteq B$ to indicate that $A$ is a subset of $B$. 
+
+\textbf{Definition 6.3.} The set $A$ is a \textbf{proper subset} of $B$ if $A \subseteq B$ and $A \neq B$, and we write $A \subset B$.
+
+\textbf{Definition 6.4.} The set $A$ is \textbf{equal} to $B$, written $A = B$, if $A \subseteq B$ and $B \subseteq A$.
+
+\textbf{Definition 6.5.} The \textbf{union} of the sets $A$ and $B$ is the set 
+	$A \cup B = \{x : x \in A\ or\ x \in B \}$.
+	
+\textbf{Definition 6.6.} The \textbf{intersection} of the sets $A$ and $B$ is the set 
+	$A \cap B = \{x : x \in A\ and\ x \in B \}$.
+	
+\textbf{Definition 6.7.} Two sets $A$ and $B$ are \textbf{disjoint} if $A \cap B = \emptyset$.
+
+\textbf{Definition 6.8.} The \textbf{set difference} of set $B$ in set $A$ is the set 
+	$A \setminus B = \{x \in A : x \notin B \}$.
+	
+\textbf{Definition 6.9.} If the set X is the universe and A is a subset of X, the  \textbf{complement} of A is the set $A^c = X \setminus A$.
+
+\subsection{Theorem 6.11.} Let $A$ be a set. Then $\emptyset \subseteq A$. 
+
+
+
+
+\end{document}
