@@ -1,0 +1,68 @@
+\documentclass{article}
+%\documentclass{scrartcl}
+\usepackage{scrextend}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{amssymb}
+\usepackage{array}   % for \newcolumntype macro
+\usepackage{amsthm}
+\usepackage{chngcntr}
+\usepackage{mathtools}
+
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+
+\newcolumntype{L}{>{$}c<{$}} % Define mathtype column
+
+\begin{document}
+
+
+
+\centerline{\sc \large Exam 1 Study Guide}
+\vspace{.5pc}
+\centerline{\sc Jacob Huesman, 07 Feb 2016}
+
+\vspace{2pc}
+
+\underline{Theorem}
+\begin{addmargin}[0.75cm]{0cm}
+	If $n$ is an integer, then $n^2 + 3n + 2$ is an even integer.
+\end{addmargin}
+
+\underline{Lemma}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}[leftmargin=1.35cm]
+	\item An even number multiplied by an odd number is even.
+	\item A given integer that is even or odd, remains even or odd when summed with an even integer.
+\end{enumerate}
+
+\underline{Proof}
+\begin{addmargin}[0.75cm]{0cm}
+	We start by factoring $n^2 + 3n +2$ to get $n(n+3)+2$.
+	
+	Suppose $n$ is even, then $(n+3)$ must be odd, as 
+	\begin{equation}
+		(n+3)=(2k+3):k\in\mathbb{Z}=2k+1
+	\end{equation}
+	
+	For $n \in 2\mathbb{Z}$ the expression $n(n+3)+2$ is then an even number by lemma a and b.
+	
+	Now suppose $n$ is odd, then $(n+3)$ must be even as 
+	\begin{equation}
+		(n+3)=(2k+1+3): k \in \mathbb{Z}=2k
+	\end{equation}
+	
+	For $n \in 2\mathbb{Z}+1$ the expression $n(n+3)+2$ is then an even number by lemma a and b.
+	
+	We have proven that the expression is even when $n$ is even and $n$ is odd.
+	
+	The union of the two sets is the integer set, so we conclude the following.
+	
+	If $n$ is an integer, then $n^2 + 3n + 2$ is an even integer.
+			
+	\qed
+\end{addmargin}
+
+
+\end{document}
