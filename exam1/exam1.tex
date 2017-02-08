@@ -25,6 +25,8 @@
 
 \vspace{2pc}
 
+\section{Chapter 5. Proof Techniques}
+\subsection{Problem 5.3}
 \underline{Theorem}
 \begin{addmargin}[0.75cm]{0cm}
 	If $n$ is an integer, then $n^2 + 3n + 2$ is an even integer.
@@ -57,12 +59,108 @@
 	
 	We have proven that the expression is even when $n$ is even and $n$ is odd.
 	
-	The union of the two sets is the integer set, so we conclude the following.
+	The union of the two sets is the integer set, so we conclude through proof by cases the following.
 	
 	If $n$ is an integer, then $n^2 + 3n + 2$ is an even integer.
 			
 	\qed
 \end{addmargin}
 
+
+\pagebreak
+
+
+\subsection{Problem 5.13}
+\underline{Theorem}
+\begin{addmargin}[0.75cm]{0cm}
+	$sin^2(x) \leq |sin(x)|$ for all $x \in \mathbb{R}$
+\end{addmargin}
+
+\underline{Definition}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}[leftmargin=1.35cm]
+	\item $sin(x) \in \{-1 \leq y \leq 1 : y \in \mathbb{R}\}$
+\end{enumerate}
+
+\underline{Lemma}
+\begin{enumerate}[leftmargin=1.35cm]
+	\item $x^2 \leq |x|$ for $-1 \leq x \leq 1$ where $x \in \mathbb{R}$
+\end{enumerate}
+
+\underline{Proof}
+\begin{addmargin}[0.75cm]{0cm}
+	We start by proving Lemma a.
+	
+	Note that the range of $x^2$ and $|x|$ for $-1 \leq x \leq 1$ is limited to $[0,1]$.
+	
+	A real number $x$ where $0 < x \leq 1$ can be represented by $x = \frac{1}{a}, a \in \{\mathbb{N}>0\}$
+	
+	Observe that $x^2 = (\frac{1}{a})^2 = \frac{1}{a^2}$.
+	
+	Since $a^2 \geq a$ for any integer greater than 0, $(\frac{1}{a})^2 \leq \frac{1}{a}$.
+	
+	The above is equivalent to saying $x^2 \leq x$ for $x \in \mathbb{R}$ where $0 < x \leq 1$.
+	
+	This leaves the case where x = 0. 
+	
+	Well if $x = 0$, then $x^2 = 0$ as well.
+	
+	So $x^2 \leq |x|$ for $-1 \leq x \leq 1$ where $x \in \mathbb{R}$.
+	
+	\qed
+	
+	Note that the range of $sin^2(x)$ and $|sin(x)|$ is $[0,1]$.
+	
+	We can then conclude by Lemma a the following.
+	\begin{equation}
+		sin^2(x) \leq |sin(x)| \text{ for all } x \in \mathbb{R}
+	\end{equation}	
+	
+	\qed
+\end{addmargin}
+
+
+\pagebreak
+
+\underline{Theorem}
+\begin{addmargin}[0.75cm]{0cm}
+	TODO
+\end{addmargin}
+
+\underline{Lemma}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}[leftmargin=1.35cm]
+	\item TODO
+	\item TODO
+\end{enumerate}
+
+\underline{Proof}
+\begin{addmargin}[0.75cm]{0cm}
+	TODO
+	
+	\qed
+\end{addmargin}
+
+
+\pagebreak
+
+\underline{Theorem}
+\begin{addmargin}[0.75cm]{0cm}
+	TODO
+\end{addmargin}
+
+\underline{Lemma}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}[leftmargin=1.35cm]
+	\item TODO
+	\item TODO
+\end{enumerate}
+
+\underline{Proof}
+\begin{addmargin}[0.75cm]{0cm}
+	TODO
+	
+	\qed
+\end{addmargin}
 
 \end{document}
