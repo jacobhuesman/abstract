@@ -156,6 +156,26 @@ We have shown $(A \cup B) \subseteq C \rightarrow (A \subseteq C) \land (B \subs
 
 We conclude that $(A \subseteq C) \land (B \subseteq C) \iff (A \cup B) \subseteq C$
 
+\qed
+
+
+\pagebreak
+\subsection{Problem 7.15}
+Prove that $A^c \cup B^c = X$ if and only if $A$ and $B$ are disjoint.
+
+\textbf{\textit{Proof.}}
+
+Observe that $A$ and $B$ are disjoint if $A \cap B = \emptyset$.
+
+To prove that  ``$A^c \cup B^c = X$ if and only if $A$ and $B$ are disjoint", we must first prove that $A^c \cup B^c = X \rightarrow A \cap B = \emptyset$, and then prove $A \cap B = \emptyset \rightarrow A^c \cup B^c = X$.
+
+Let $A \cap B = \emptyset$. When we take the complement of both sides of the statement we get
+$(A \cap B)^c = \emptyset^c = A^c \cup B^c = X$. So $A^c \cup B^c = X \rightarrow A \cap B = \emptyset$.
+
+Let $A^c \cup B^c = X$. When we take the complement of both sides of the statement we get
+$(A^c \cup B^c)^c = X^c = A \cap B = \emptyset$. So $A \cap B = \emptyset \rightarrow A^c \cup B^c = X$.
+
+We conclude that $A^c \cup B^c = X$ if and only if $A$ and $B$ are disjoint.
 
 
 \qed
