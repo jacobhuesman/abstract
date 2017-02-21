@@ -1,0 +1,163 @@
+\documentclass{article}
+%\documentclass{scrartcl}
+\usepackage{scrextend}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{amssymb}
+\usepackage{array}   % for \newcolumntype macro
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{chngcntr}
+
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+
+\newcolumntype{L}{>{$}c<{$}} % Define mathtype column
+
+\begin{document}
+
+
+
+\centerline{\sc \large Abstract Mathematics Homework 4}
+\vspace{.5pc}
+\centerline{\sc Jacob Huesman, 22 Feb 2016}
+
+\vspace{2pc}
+
+
+\section{Book Problems}
+\subsection{Theorem 7.4.9}
+Let $X$ denote a set and A,B, and C denote subsets of X. Then
+\begin{equation}
+	(A \cup B) \cup C = A \cup (B \cup C)
+\end{equation}
+	
+\textbf{\textit{Proof.}}
+
+For sets $X$ and $Y$, $X \cup Y$ is defined a follows.
+\begin{equation}
+	\text{If } X \cup Y \text{, then } x \in X \text{ or } x \in Y
+\end{equation}
+So $A \cup B$ is the set where $x \in X$ or $x \in Y$.
+
+The union of $(A \cup B)$ with $C$ is then the set where $x \in A$, $x \in B$, or $x \in C$.
+
+Now if $B \cup C$, then $x \in B$ or $x \in C$.
+
+The union of $A \cup (B \cup C)$ is then the set where $x \in A$, $x \in B$, or $x \in C$.
+
+Since both the set $(A \cup B) \cup C$ and $A \cup (B \cup C)$ share the same definition, we
+can conclude that $(A \cup B) \cup C \subseteq A \cup (B \cup C)$, conversely that 
+$A \cup (B \cup C) \subseteq (A \cup B) \cup C$, and as a result of the last two conclusions,
+that $(A \cup B) \cup C = A \cup (B \cup C)$.
+
+\qed
+
+
+\pagebreak
+\subsection{Theorem 7.4.15}
+Let $X$ denote a set and A,B, and C denote subsets of X. Then
+\begin{equation}
+	X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)
+\end{equation}
+
+\textbf{\textit{Proof.}}
+	
+Observe the following:
+\begin{enumerate}
+	\item If $x \in X \setminus (A \cup B)$, then $x \in X$ and $x \not\in (A \cup B)$.
+	\item If $x \in (X \setminus A) \cap (X \setminus B)$, then $x \in X$, $x \not\in A$, and $x \not\in B$.
+\end{enumerate}
+
+We must first prove that $X \setminus (A \cup B) \subseteq (X \setminus A) \cap (X \setminus B)$.
+
+Notice for the set where $x \in X \setminus (A \cup B)$, that $x \in X$, therefore what remains to show is that $x \not\in A$ and $x \not\in B$.
+
+The set where $x \not\in A \cup B$ is defined as the set  $\{x\ |\ \lnot(x \in A \lor x \in B)\}$.
+
+By DeMorgan's Laws of Logic we can say that this is equivalent to the set 
+$\{x\ |\ x \not\in A \land x \not\in B\}$
+
+Hence $x \not\in A$, $x \not\in B$, and $X \setminus (A \cup B) \subseteq (X \setminus A) \cap (X \setminus B)$.
+
+We now must show that $(X \setminus A) \cap (X \setminus B) \subseteq X \setminus (A \cup B)$.
+
+The set $(X \setminus A) \cap (X \setminus B) \subseteq X \setminus (A \cup B)$ can be defined as the set where $\{x\ |\ x \in X \land x \not\in A \land x \not\in B \}$.
+
+By DeMorgan's Laws of Logic we can say this is equivalent to the set $\{x\ |\ x \in X \land \lnot(x \in A \lor x \in B) \}$, which is the set $x \in X \setminus (A \cup B)$.
+
+We conclude that $(X \setminus A) \cap (X \setminus B) \subseteq X \setminus (A \cup B)$ and therefore:
+\begin{equation}
+	X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)
+\end{equation}
+
+\qed
+
+
+
+\pagebreak
+\subsection{Theorem 7.4.17}
+Let $X$ denote a set and A,B, and C denote subsets of X. Then
+\begin{equation}
+	A \setminus B = A \cap B^c
+\end{equation}
+
+\textbf{\textit{Proof.}}
+
+Observe the following:
+\begin{enumerate}
+	\item $A^c = \{x\ |\ x \not\in B \}$
+	\item $A \cap B = \{x\ |\ x \in A \land x \in B \}$
+\end{enumerate}
+
+Following the definitions observed above we can describe $A \cap B^c$ as follows:
+\begin{equation}
+	A \cap B^c = \{x\ |\ x \in A \land x \not\in B \}
+\end{equation}
+Well that's the definition of $A \setminus B$, so we conclude $A \setminus B = A \cap B^c$.
+
+\qed
+
+
+
+\pagebreak
+\subsection{Theorem 7.4.19}
+Let $X$ denote a set and A,B, and C denote subsets of X. Then
+\begin{equation}
+	(A \subseteq C) \land (B \subseteq C) \iff (A \cup B) \subseteq C
+\end{equation}
+
+\textbf{\textit{Proof.}}
+
+Observe the following:
+\begin{enumerate}
+	\item $A \subseteq B$ indicates that every element of A is in B.
+	\item $A \cup B = \{x\ |\ x \in A \lor x \in B \}$
+\end{enumerate}
+
+We start by proving $(A \subseteq C) \land (B \subseteq C) \rightarrow (A \cup B) \subseteq C$.
+
+The statement form $(A \cup B) \subseteq C$ states that every element in the sets A,B is contained in C.
+
+So the set A must be contained in C and the set B must be contained in C.
+
+We have shown $(A \subseteq C) \land (B \subseteq C) \rightarrow (A \cup B) \subseteq C$.
+
+Now we must prove $(A \cup B) \subseteq C \rightarrow (A \subseteq C) \land (B \subseteq C)$.
+
+Let $A \subseteq C$, $B \subseteq C$, and $x \in (A \cup B)$. 
+
+Then $x \in A$ or $x \in B$, which are both subsets of C.
+
+This makes $(A \cup B)=\{x\ |\ x \in A \lor x \in B \}$ a subset of C.
+
+We have shown $(A \cup B) \subseteq C \rightarrow (A \subseteq C) \land (B \subseteq C)$.
+
+We conclude that $(A \subseteq C) \land (B \subseteq C) \iff (A \cup B) \subseteq C$
+
+
+
+\qed
+
+\end{document}
